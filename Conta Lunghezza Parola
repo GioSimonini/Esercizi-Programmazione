@@ -16,4 +16,23 @@ int main() {
     
 }
 
+//------------------------------- secondo metodo--------------------------------------------
+#include <stdio.h>
+#include <string.h>
+
+#define DIM 20
+
+int main() {
+  char s[DIM];
+    int i,cont; 
+
+  printf("inserire parola: ");
+  scanf("%s",s);
+
+   cont=strelen(s);
+  
+  printf("lunghezza registrata: %d", cont);
+    
+}
+
 
