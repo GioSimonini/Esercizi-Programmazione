@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int r,c,n,x,controllo=0;
+    printf("Inserisci dimensione matrice \n");
+    printf("Inserisci righe: ");
+    scanf("%d", &r);
+    printf("Inserisci colonne: ");
+    scanf("%d", &c);
+
+  int m[r][c];
+
+  for(int i=0; i<r ; i++){
+    for(int j=0; j<c ; j++){
+        n=rand() %99;
+        m[i][j]=n;
+      
+      }
+  }
+  
+  for(int i=0; i<r ; i++){
+    for(int j=0; j<c ; j++){
+      printf("%d \t",m[i][j]);
+    }
+    printf("\n");
+  }
+
+  printf("Inserisci il numero da cercare: ");
+  scanf("%d",&x);
+
+  for(int i=0; i<r ; i++){
+    for(int j=0; j<c ; j++){
+    if(controllo==0){
+     if(x==m[i][j]){
+       printf("il numero si trova in posizione %d ; %d \n",i+1,j+1);
+       
+       
+       controllo++;
+       }
+      }else{
+        if(x==m[i][j]){
+       printf("il numero si trova %d volte anche in posizione %d ; %d \n ",controllo+1,i+1,j+1);
+
+       controllo++;
+       }
+      }
+  
+      }
+    }
+
+  
+  if(controllo==0)
+    printf("il numero non e' presente");
+}
+  
+
