@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void main()
+{
+	
+	int i,f,c;
+	
+	i=sizeof(int);
+	f=sizeof(float);
+	c=sizeof(char);
+	
+	
+	printf("size di int = %d\n", i);
+	printf("size di float = %d\n", f);
+	printf("size di char = %d\n", c);
+	
+}
