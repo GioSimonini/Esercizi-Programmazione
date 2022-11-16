@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define DIM 20
+int main() {
+  char s[DIM];
+    int i; 
+
+printf("inserire parola: ");
+scanf("%s",s);			//non metto la & COMMERCIALE perchè è già implicita nell’ S
+
+  printf("%s\n", s);
+
+
+  
+}
