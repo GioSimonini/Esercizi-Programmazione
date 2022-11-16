@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+
+
+    int DIM=0,i,controllo=0,j;
+    printf("Inserisci dimensioni vettore ");
+    scanf("%d",&DIM);
+    int v[DIM];
+
+    for (i=0; i<DIM ; i++){
+      printf("Inserisci un numero: ");
+      scanf("%d", &v[i]);
+      }
+
+    for (i=0; i<DIM ; i++){
+      for (j=0; j<DIM ; j++){
+        if(v[i]!=v[j])
+          controllo=1;
+      }
+    }
+
+  if (controllo==0)
+    printf("Tutti i numeri del vettore sono uguali");
+  else 
+  printf("c'e' un numero diverso nel vettore");
+  
+}
+  
+
