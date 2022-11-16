@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+#define DIM 5
+    
+    
+    void carica_vettore(int v[], int dim){
+        for (int i=0; i<dim; i++){
+         printf("inserire numero: ");
+         scanf("%d",&v[i]);
+        }
+    }
+ 
+ void visualizza_vettore(int v[], int dim) {
+     
+     for (int i=0; i<dim; i++){
+         printf("%d : %d\t",i,v[i]);
+         printf("\n");
+        }
+ }
+ 
+ 
+ int massimo_vettore(int v[], int dim){
+
+   int max;
+     for (int i=0; i<dim; i++){
+     if(i==0)
+         max=v[i];
+     else 
+         if (v[i]>max)
+             max=v[i];
+         }
+   return max;  
+}
+
+float media_vettore (int v[], int dim){
+ 
+    float somma,media; 
+    
+    somma=0; 
+    for (int i=0; i<dim; i++)
+        somma=somma+v[i];
+    media=somma/dim;
+    
+return media;
+}
+
+
+int main(){
+ 
+    int vet[DIM],m;
+    float md;
+    carica_vettore(vet,DIM);
+    visualizza_vettore(vet,DIM);
+    m= massimo_vettore(vet,DIM); //se è void va invocata con inseirmento
+    printf("il massimo e' %d \n",m);
+    md= media_vettore(vet,DIM);
+    printf("il la media e' %f \n",md);
+    
+    return 1;
+}
+
+
+
