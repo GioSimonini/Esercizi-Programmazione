@@ -1,0 +1,24 @@
+#include <stdio.h> 
+
+main(){
+
+  int n,i,num,max;
+  
+      printf("inserisci quanti numeri vuoi inseire:" );
+      scanf("%d",&n);
+  
+  for (i=0; i<n;i++){
+      printf("inserisci un numero: " );
+      scanf("%d",&num);
+      if(i==1){
+        num=max;
+          }else{
+        if(num>max){
+          max=num;
+          }
+        }
+    
+    }
+  printf("il numero maggiore è %d",max);
+}
+   
