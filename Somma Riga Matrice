@@ -1,0 +1,46 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+#define DIM 5 
+int main() {
+
+  int n=0,r=0,c=0,change=0,rsum=0,sum=0;
+  int m[DIM][DIM];
+  
+  for(int i=0; i<DIM; i++){
+    for (int j=0; j<DIM; j++){  
+      n=rand() %99;
+      m[i][j]=n;
+  }
+}
+
+for(int i=0; i<DIM; i++){
+    for (int j=0; j<DIM; j++){
+       printf("%d \t", m[i][j]);
+  }
+  printf("\n"); 
+}
+
+
+
+do{
+printf("inserisci la riga in cui sommare ");
+scanf("%d",&rsum);
+  }while(rsum>=5);
+
+  
+ for(int i=0; i<DIM; i++){
+      sum=sum+m[rsum][i];
+  }
+  printf("la somma dei valori in posizione %d e' %d \n", rsum,sum);
+
+
+  for(int i=0; i<DIM; i++){
+    for (int j=0; j<DIM; j++){
+       printf("%d \t", m[i][j]);
+  }
+  printf("\n"); 
+}
+}
+
+
