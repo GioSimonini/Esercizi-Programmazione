@@ -1,0 +1,16 @@
+#include <stdio.h>
+void main()
+{
+	int a,b,c; 
+	
+	b=3;
+	a=2;
+	
+	c=b*(++a);
+	
+		printf("a e %d\n", a);
+		printf("b e %d\n", b);
+		printf("c e %d\n", c);
+	}
+
+
