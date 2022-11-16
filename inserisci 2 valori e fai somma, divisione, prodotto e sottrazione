@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+   int a,b,ris;
+    char op;
+
+  printf("inserire primo valore ");
+  scanf("%d",&a);
+  printf("inserire secondo valore ");
+  scanf("%d",&b); 
+  getchar();
+  printf("inserire operatore ");
+  scanf("%c",&op);
+
+  if (op=='+'){
+  ris=a+b;
+    printf("somma: %d \n", ris);
+    }else 
+        if (op=='/'){
+        ris=a/b;
+        printf("divisione: %d \n", ris);
+          }else
+              if (op=='-'){
+              ris=a-b;
+              printf("sottrazione: %d \n", ris);
+                }else
+                  if (op=='*'){
+                  ris=a*b;
+                  printf("prodotto: %d \n", ris);
+                  }else
+                    printf("OPERATORE NON RICONOSCIUTO");
+}
