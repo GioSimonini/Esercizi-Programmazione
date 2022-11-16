@@ -1,0 +1,41 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+#define DIM 5 
+int main() {
+
+  int n=0,r=0,c=0,change=0,co=0,max=0;
+  int m[DIM][DIM];
+  
+  for(int i=0; i<DIM; i++){
+    for (int j=0; j<DIM; j++){  
+      n=rand() %99;
+      m[i][j]=n;
+  }
+}
+
+for(int i=0; i<DIM; i++){
+    for (int j=0; j<DIM; j++){
+       printf("%d \t", m[i][j]);
+  }
+  printf("\n"); 
+}
+
+
+
+do{
+printf("inserisci la colonna in cui trovare il massimo ");
+scanf("%d",&co);
+  }while(co>=5);
+
+for(int i=0; i<DIM; i++){
+  if(max==0)
+    max=m[0][co];
+  
+  if(m[i][co]>max)
+    max=m[i][co]; 
+  }
+
+  printf("il massimo valore in colonna %d e' %d", co,max);      
+}
+
