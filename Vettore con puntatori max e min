@@ -4,7 +4,7 @@ int* carica_vettore (){
 
    static int v[DIM];
    //non viene cancellato il vettoreminimo
-    forminimo(int i=0; i<dim; i++){
+    for(int i=0; i<DIM; i++){
     printf("inserire valore");
     scanf("%d", &v[i]);
     }
@@ -16,7 +16,7 @@ int* carica_vettore (){
 void stampa_vettore(int v[], int dim){
 
     for(int i=0; i<dim; i++)
-    printf("%d:&d\t",v,v[i]);
+    printf("%d : %d\t",i,v[i]);
     printf("\n");
 }
 
@@ -35,7 +35,7 @@ void minimo_massimo(int v[],int dim, int* min, int* max){
          if(i==0)
              *max = v[i];
          else 
-            if(v[i]<*max)
+            if(v[i]>*max)
                 *max=v[i];
     
     
@@ -46,7 +46,7 @@ int main(){
 
    
    int m1,m2;
-    vet=cerica_vettore();
+    vet=carica_vettore();
     //non ci va le & 
     stampa_vettore(vet,DIM);
     
@@ -57,4 +57,3 @@ int main(){
     printf("il massimo e' %d \n",m2);
     return 1;
 }
-
