@@ -1,0 +1,54 @@
+#include <stdio.h>
+#define DIM 8
+int* carica_vettore (){
+
+   static int v[DIM];
+   //non viene cancellato il vettoreminimo
+    forminimo(int i=0; i<dim; i++){
+    printf("inserire valore");
+    scanf("%d", &v[i]);
+    }
+    
+    return v;
+}
+
+
+void stampa_vettore(int v[], int dim){
+
+    for(int i=0; i<dim; i++)
+    printf("%d:&d\t",v,v[i]);
+    printf("\n");
+}
+
+void cerca_valore(int v[], int dim,int* primo,int* ultimo){
+    *primo=-1;
+    *ultimo=-1;
+    
+    for(int i=0; i<dim; i++)
+        if(v[i]==x)
+            if(*primo==-1){
+                *primo=i;
+                *ultimo=i;
+            }else
+                *ultimo=i;
+    
+}
+int main(){
+ 
+   int* vet;
+   int val,indice1,indice2;
+  
+    vet=cerica_vettore();
+    //non ci va le & 
+    stampa_vettore(vet,DIM);
+    
+    cerca_valore(vet,DIM,val,&indice1,&indice2);
+    if(indice1=-1)
+        printf("assente\n");
+    else{
+        printf("occorrenza in posizione %d\n", indice1);
+        printf("ultima ccorrenza in posizione %d\n", indice2);
+        
+    }
+}
+
