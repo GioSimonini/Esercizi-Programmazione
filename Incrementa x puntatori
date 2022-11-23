@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void incrementa (int* x){
+    (*x)++;
+  
+}
+int main(){
+ printf("inserire un valore");
+ scanf("%d", &a);
+ incrementa(&a);
+ printf("valore %d \n",a);
+ 
+ 
+ return 1;
+}
