@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+
+void ordina(int* a,int* b,int* c){
+  int k;
+    
+    
+    if((*a)>(*b)){
+        k=*a;
+        *a=*b;
+        *b=k;
+    }
+  if((*a)>(*c)){
+        k=*a;
+        *a=*c;
+        *c=k;
+    }
+    if((*b)>(*c)){
+        k=*b;
+        *b=*c;
+        *c=k;
+    }
+   
+
+  
+}
+
+
+int main(){
+    int a,b,c; 
+    printf("Inserisci 3 numeri interi \n");
+    printf("Inserisci primo numero: ");
+    scanf("%d",&a);
+  
+    printf("Inserisci secondo numero: ");
+    scanf("%d",&b);
+  
+    printf("Inserisci terzo numero: ");
+    scanf("%d",&c);
+    
+    ordina(&a,&b,&c);
+    printf("a: %d \n",a);
+    printf("b: %d \n",b);
+    printf("c: %d \n",c);
+    
+    
+}
