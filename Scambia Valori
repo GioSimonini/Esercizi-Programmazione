@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void scambia (int x,int y){
+    int k;
+    
+    k=*x;
+    *x=*y;
+    *y=k;
+}
+int main(){
+ int a,b; 
+ 
+ printf("inserire due valori");
+ scanf("%d", &a);
+ scanf("%d", &b);
+ 
+ scambia(&a,&b);
+ printf("%d %d \n",a,b);
+}
+
