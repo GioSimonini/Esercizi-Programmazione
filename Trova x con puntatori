@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h> 
+#define DIM 5
+
+
+int* carica_vettore(){
+  int n;
+  static int v[DIM];
+  for(int i=0; i<DIM; i++){
+    v[i]=rand()%9;
+  }
+
+  return v;
+}
+
+void stampa_vettore(int v[],int dim){
+
+  for(int i=0; i<dim; i++){
+    printf(" - %d : %d",i,v[i]);
+    printf("\n");
+  }
+}
+
+void cerca_x(int v[],int dim,int x,int *prima,int *ultima){
+  *prima=-1;
+  *ultima=-1;
+ for(int i=0; i<dim; i++){
+    if(v[i]==x){
+      if(*prima==-1)
+      *prima=i;
+      else
+        *ultima=i;
+      }
+   }
+  
+}
+
+
+int main() {
+  int* v;
+  int p,u,cerca;
+  v=carica_vettore();
+  stampa_vettore(v,DIM);
+  
+  printf("inserisci il valore da cercare: ");
+  scanf("%d",&cerca);
+    
+  cerca_x(v,DIM,cerca,&p,&u);
+
+  if(p==-1){
+    printf("assente \n");
+    }else{
+  printf("la prima occorrenza di %d e' %d \n",cerca,p);
+  printf("l ultima occorrenza di %d e' %d \n",cerca,u);
+    }
+  return 1;
+  
+}
+  
