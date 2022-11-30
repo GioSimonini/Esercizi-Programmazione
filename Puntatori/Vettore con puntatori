@@ -32,7 +32,7 @@ int main(){
  
    int* vet;
    int* vet2
-    vet=cerica_vettore();
+    vet=carica_vettore();
     //non ci va le & 
     stampa_vettore(vet,DIM);
     vet2=copia_vettore(vet);
