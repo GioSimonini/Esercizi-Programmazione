@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+#define DIM 10 
+#define TAPPO -1
+
+void carica_vettore(int* v){
+  
+  int i;
+    i=0;
+  
+  do{
+  printf("inserire elemento in posizione %d (-1 per  terminare): ", i);
+    scanf("%d",&v[i]);
+    i++;
+    }while(v[i-1] != -1 && i<DIM-1);
+  
+  if (i==DIM-1)
+    v[i]=-1;
+ 
+}
+
+int* carica_vettore2(){
+
+static int v[DIM];
+  
+  int i;
+    i=0;
+  
+  do{
+  printf("inserire elemento in posizione %d (-1 per  terminare): ", i);
+    scanf("%d",&v[i]);
+    i++;
+    }while(v[i-1] != -1 && i<DIM-1);
+  
+  if (i==DIM-1)
+    v[i]=-1;
+  
+  return v;
+}
+
+
+void visualizza_vettore(int* v){
+for(int i=0; v[i]!=TAPPO; i++)
+printf("\t %d ",v[i]);
+
+printf("\n");
+
+}
+
+int main(){
+//con carica vettore 
+  int v[DIM];
+  carica_vettore(v);
+  visualizza_vettore(v);
+
+//carica vettore2
+  int* v2;
+  v2=carica_vettore2();
+  visualizza_vettore(v2);
+}
+  
