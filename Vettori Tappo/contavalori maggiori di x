@@ -1,0 +1,48 @@
+#include <stdio.h>
+#define DIM 10
+#define TAPPO -1
+void caricavettore(int* v){
+int i=0;
+
+  do{
+    printf("Inserire un numero (-1 per uscire): );
+    scanf("%d",&v[i]);
+    i++;
+  }while(v[i-1] != -1 && i<DIM-1);
+
+  if(i==DIM-1)
+    v[i]=-1;
+}
+void visualizza_vettore(int* v){
+for(int i=0; v[i]!=TAPPO; i++)
+printf("\t %d ",v[i]);
+
+printf("\n");
+
+}
+
+int cercamaggiore(int v[],int x){
+  int c=0,i=0;
+
+  do{
+    if(v[i]>x)
+      c++;
+    i++;
+  }while(v[i]!=-1);
+  
+return c;
+  
+}
+
+
+int main() {
+    int v[DIM];
+    int x,conta;
+  caricavettore(v);
+  visualizza_vettore(v);
+  printf("Inserici il valore da cercare: ");
+  scanf("%d",&x);
+  conta=cercamaggiore(v,x);
+  printf("I numeri maggiori di %d nel vettore sono %d",x,conta);
+}
+  
