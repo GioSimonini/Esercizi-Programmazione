@@ -1,0 +1,45 @@
+#include <stdio.h>
+#define DIM 5
+
+void caricavettore(int* v){
+
+  for(int i=0 ; i<DIM; i++){
+      printf("inserisci numero: ");
+      scanf("%d",&v[i]);
+    
+  }
+  
+}
+
+void stampavettore(int* v){
+
+  
+for(int i=0 ; i<DIM; i++){
+      printf(" %d \t", v[i]);
+      
+  }
+  printf("\n");
+}
+
+
+void cercavettore(int* v,int cerca,int* oc){
+  *oc=0;
+  for(int i=0; i<DIM; i++){
+      if (v[i]==cerca)
+        *oc=*oc+1;
+  }
+}
+
+
+int main() {
+
+  int v[DIM];
+  int cerca,n;
+  caricavettore(v);
+  stampavettore(v);
+  printf("inserici il numero da cercare nel vettore: ");
+  scanf("%d",&cerca);
+  cercavettore(v,cerca,&n);
+  printf("%d si trova %d nel vettore",cerca,n); 
+}
+  
