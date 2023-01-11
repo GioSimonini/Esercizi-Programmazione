@@ -15,10 +15,8 @@ void visualizza(char* v[]){
     }
 
 }
-
 void contalettere(char* v[], int* contaM, int* contam)
 {
-  printf(" controllo 1 \n");
     *contaM=0;
     *contam=0;
      for (int i=0; i<DIM; i++){
@@ -48,13 +46,11 @@ int contacarattere(char* v[], char x){
  return conta;
 }
 int main(){
-    char* v[DIM] = {"Ciao", "come", "Stai?"};
+    char* v[DIM] ={"Ciao", "Come", "stai?"};
     char c;
     int m1,m2,cont;
     visualizza(v);
-      printf(" controllo \n");
     contalettere(v,&m1,&m2);
-  printf(" controllo \n");
     printf("Numero stringhe con iniziale maiuscola %d \n",m1);
     printf("Numero stringhe con iniziale minuscola %d \n",m2);
     
