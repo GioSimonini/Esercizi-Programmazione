@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+
+#define R 4
+#define C 10
+
+int main() {
+    char *v[R] ={"ciao," ,"come","stai?"};
+    int i;
+    
+    for(i=0; i<R; i++){
+        if(v[i] != NULL)
+            printf("%d %s\n",i,v[i]);
+    }
+    
+    return 0;
+}
