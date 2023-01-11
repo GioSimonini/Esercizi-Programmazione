@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+#define R 4
+#define C 10
+
+int main() {
+    char m[R][C];
+    int i;
+    m[3][0]='\0',
+    
+    for(i=0; i<R; i++){
+        printf("inserire stirnga con indice %d: ",i);
+        scanf("%s",m[i]);
+    }
+    
+    for(i=0; i<R; i++){
+        if(m[i][0] != '\0')
+            printf("%d %s\n",i,m[i]);
+    }
+    
+    return 0;
+}
