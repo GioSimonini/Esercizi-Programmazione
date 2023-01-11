@@ -5,6 +5,7 @@
 #define C 10
 
 int main() {
+   //in caso di ipossibilità di modificare le strighe come ora metto const char *v[R] 
     char *v[R] ={"ciao," ,"come","stai?"};
     int i;
     
