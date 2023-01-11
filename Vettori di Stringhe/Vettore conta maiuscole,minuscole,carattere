@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include <ctype.h>
+
+
+
+#define DIM 5
+
+void visualizza(char* v[]){
+
+      for(int i=0; i<DIM; i++){
+        if(v[i]!= NULL)
+        printf("%d: %s \n",i,v[i]);
+    }
+
+}
+
+void contalettere(char* v[], int* contaM, int* contam)
+{
+  printf(" controllo 1 \n");
+    *contaM=0;
+    *contam=0;
+     for (int i=0; i<DIM; i++){
+        if(v[i]!= NULL){
+         if(isupper(v[i][0]))
+             (*contaM)++;
+         if(islower(v[i][0]))
+             (*contam)++;
+       }
+    }
+}
+
+int contacarattere(char* v[], char x){
+ 
+    int j,conta=0,l;
+    
+    for(int i=0; i<DIM; i++){
+        if(v[i]!= NULL){
+            l=strlen(v[i]);
+            for(int j=0; j<DIM; j++)
+                if(v[i][j]==x)
+                    conta++;  
+        }
+        
+     
+  }
+ return conta;
+}
+int main(){
+    char* v[DIM] = {"Ciao", "come", "Stai?"};
+    char c;
+    int m1,m2,cont;
+    visualizza(v);
+      printf(" controllo \n");
+    contalettere(v,&m1,&m2);
+  printf(" controllo \n");
+    printf("Numero stringhe con iniziale maiuscola %d \n",m1);
+    printf("Numero stringhe con iniziale minuscola %d \n",m2);
+    
+    printf("Inserire un carattere: ");
+    scanf("%c", &c);
+    cont=contacarattere(v,c);
+    printf("il carattere %c nella stinga sono %d \n",c,cont);
+
+    return 0;
+}
