@@ -14,11 +14,13 @@ void carica (char m[][C]){
         scanf("%s",m[i]);
     }
 }
-//uso una matrice perchè è più comoda dei vettori di putatoriScrivere un programma organizzato nelle seguenti funzioni:
+//uso una matrice perchè è più comoda dei vettori di putatori
+/*Scrivere un programma organizzato nelle seguenti funzioni:
 - carica vettore di stringhe da tastiera, una per volta;
 - per ogni stringa, converte tutti i caratteri minuscoli in maiuscoli;
 - visualizza vettore di stringhe;
 - main: dichiara un vettore di stringhe (mutabili) e invoca le altre funzioni. 
+*/
 void visualizza (char m[][C]){
     
     for(int i=0; i<R; i++){
