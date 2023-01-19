@@ -45,7 +45,7 @@ void visualizza_matrice(int dim, int m[dim][dim]) {
 }
 
 
-void min_e_max(int m[dim][dim],int dim,int r, int* p1,int* p2){
+void min_e_max(int dim,int m[dim][dim],int r, int* p1,int* p2){
     *p1=-1;
     *p2=-1;
     if(r>=dim){
@@ -82,8 +82,8 @@ int main(int argc, char* argv[]){
         }
     
     printf("Inserire riga:" );
-    scanf("%d",&r);
-    min_e_max(mat,d,r,&min,&max);
+    scanf("%d",&riga);
+    min_e_max(d,mat,riga,&min,&max);
     
     printf("min: %d , max: %d ",min,max);
     } 
