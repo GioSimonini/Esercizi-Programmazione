@@ -85,7 +85,7 @@ int main(int argc, char* argv[]){
     scanf("%d",&r);
     min_e_max(mat,d,r,&min,&max);
     
-    printf("min: %d , max: %d ",&min,&max);
+    printf("min: %d , max: %d ",min,max);
     } 
    return 1; 
 }
